@@ -20,10 +20,10 @@ async function get_stETH_WETH_Price() {
       let msg = '';
 
       if (priceNative < 0.995) {
-        msg = '**stETH < 0.995 in Uniswap V2:**';
+        msg = '*stETH < 0.995 in Uniswap V2:*';
         return { msg, priceNative, url: response.data.pair.url };
       } else if (priceNative > 1) {
-        msg = '**stETH > 1 in Uniswap V2:**';
+        msg = '*stETH > 1 in Uniswap V2:*';
         return { msg, priceNative, url: response.data.pair.url };
       }
 
