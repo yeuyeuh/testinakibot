@@ -19,6 +19,7 @@
   "homepage": "https://github.com/yeuyeuh/testinakibot#readme",
   "dependencies": {
     "axios": "^1.6.2",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.64.0"
   }
 }
