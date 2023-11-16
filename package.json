@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/yeuyeuh/testinakibot/issues"
   },
-  "homepage": "https://github.com/yeuyeuh/testinakibot#readme"
+  "homepage": "https://github.com/yeuyeuh/testinakibot#readme",
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
 }
