@@ -38,6 +38,7 @@ async function get_stETH_WETH_Price() {
   }
 }
 
+/*
 // Fonction pour envoyer le prix dans le canal Telegram
 async function send_stETH_WETH_Price() {
   console.log("send eth");
@@ -51,6 +52,7 @@ async function send_stETH_WETH_Price() {
       bot.sendMessage(chatId, message, { parse_mode: 'Markdown', disable_web_page_preview: true });
   }
 }
+*/
 
 
 const sendMessage = require("../../sendMessage");
@@ -72,9 +74,9 @@ exports.handler = async (event) => {
 
   }
 
-  setInterval(sendMessage(message.chat.id, msg), 20000);
+  //setInterval(sendMessage(message.chat.id, msg), 20000);
 
-  //setInterval(() => {sendMessage(message.chat.id, "I got your message!")}, 20000);
+  setInterval(() => {sendMessage(message.chat.id, "I got your message!")}, 20000);
   /*
   // Utilisez une fonction de rappel pour setInterval
   setInterval(() => {
