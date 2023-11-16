@@ -73,7 +73,7 @@ exports.handler = async (event) => {
     console.log("succeed eth");
 
   }else{
-    msg="";
+    msg="nothing";
   }
 
   setInterval(sendMessage(message.chat.id, msg), 20000);
