@@ -19,11 +19,11 @@ async function get_stETH_WETH_Price() {
       const priceNative = pair.priceNative;
       let msg = '';
 
-      if (priceNative < 1) {
-        msg = '*stETH < 0.999 in Uniswap V2:*';
+      if (priceNative < 0.995) {
+        msg = '**stETH < 0.995 in Uniswap V2:**';
         return { msg, priceNative, url: response.data.pair.url };
       } else if (priceNative > 1) {
-        msg = '*stETH > 1 in Uniswap V2:*';
+        msg = '**stETH > 1 in Uniswap V2:**';
         return { msg, priceNative, url: response.data.pair.url };
       }
 
@@ -72,6 +72,8 @@ exports.handler = async (event) => {
     msg = `${results.msg}\nstETH = ${results.priceNative} WETH \n${results.url}`;
     console.log("succeed eth");
 
+  }else{
+    msg="";
   }
 
   setInterval(sendMessage(message.chat.id, msg), 20000);
