@@ -61,11 +61,13 @@ const sendMessage = require("../../sendMessage");
 
 
 exports.handler = async (event) => {
+
+  console.log("here been here");
   const { message } = JSON.parse(event.body);
   //await sendMessage(message.chat.id, "I got your message!");
 
   let msg = "I got your message!";
-
+  console.log("here been there");
   const results = await get_stETH_WETH_Price();
 
   if (results && results.priceNative !== null) {
