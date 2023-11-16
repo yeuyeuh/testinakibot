@@ -13,7 +13,7 @@ module.exports = async (chat_id, text) => {
     } else {
       await axios.post(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
         chat_id,
-        text: "*Nothing for the moment but searching...*",
+        "*Nothing for the moment but searching...*",
         parse_mode:Markdown,
         disable_web_page_preview: true,
       });
