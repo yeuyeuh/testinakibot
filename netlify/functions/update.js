@@ -1,7 +1,7 @@
 const axios = require("axios");//.default;
-const TelegramBot = require('node-telegram-bot-api');
+//const TelegramBot = require('node-telegram-bot-api');
 // Initialiser le bot Telegram
-const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
+//const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 console.log("booot");
 
 async function get_stETH_WETH_Price() {
@@ -78,6 +78,20 @@ exports.handler = async (event) => {
     msg="nothing";
   }
 
+  setInterval(sendMessage(message.chat.id, msg), 20000);
+
+  //setInterval(() => {sendMessage(message.chat.id, "I got your message!")}, 20000);
+  
+  /*
+  // Utilisez une fonction de rappel pour setInterval
+  setInterval(() => {
+    console.log("why");
+    sendMessage(message.chat.id, msg)
+      .catch((error) => {
+        console.error('Erreur lors de l\'envoi du message:', error.message || error);
+      });
+  }, 20000);
+  */
 
   
   return { statusCode: 200 };
