@@ -1,7 +1,7 @@
 const axios = require("axios");//.default;
-const TelegramBot = require('node-telegram-bot-api');
+//const TelegramBot = require('node-telegram-bot-api');
 // Initialiser le bot Telegram
-const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
+//const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 console.log("booot");
 
 async function get_stETH_WETH_Price() {
