@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   try {
     // Remplacez 'YOUR_BOT_TOKEN' par le token de votre bot Telegram
     const botToken = process.env.BOT_TOKEN;
-    const chatId = JSON.parse(event.body).message.chat.id; //'YOUR_CHAT_ID'; // Remplacez par l'ID de chat de la conversation où vous voulez envoyer le message
+    const chatId = '-4024637922'; //JSON.parse(event.body).message.chat.id; //'YOUR_CHAT_ID'; // Remplacez par l'ID de chat de la conversation où vous voulez envoyer le message
 
     const message = 'Hello from your Netlify bot!'; // Message à envoyer
 
