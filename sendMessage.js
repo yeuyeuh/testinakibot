@@ -16,7 +16,7 @@ module.exports = async (chat_id, text) => {
     }
     return true;
   } catch (error) {
-    console.error("Erreur lors de l'envoi du message:", error.message || error);
+    console.error("Error YeuYEUH in message", error.message || error);
     return false;
   }
 };

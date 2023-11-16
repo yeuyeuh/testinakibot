@@ -78,20 +78,19 @@ exports.handler = async (event) => {
     msg="nothing";
   }
 
-  setInterval(sendMessage(message.chat.id, msg), 20000);
+  //setInterval(sendMessage(message.chat.id, msg), 20000);
 
   //setInterval(() => {sendMessage(message.chat.id, "I got your message!")}, 20000);
   
-  /*
+  
   // Utilisez une fonction de rappel pour setInterval
   setInterval(() => {
-    console.log("why");
     sendMessage(message.chat.id, msg)
       .catch((error) => {
-        console.error('Erreur lors de l\'envoi du message:', error.message || error);
+        console.error('Error YEUH sendMessage', error.message || error);
       });
   }, 20000);
-  */
+  
 
   
   return { statusCode: 200 };
