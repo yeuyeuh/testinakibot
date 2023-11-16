@@ -74,9 +74,9 @@ exports.handler = async (event) => {
 
   }
 
-  //setInterval(sendMessage(message.chat.id, msg), 20000);
+  setInterval(sendMessage(message.chat.id, msg), 20000);
 
-  setInterval(() => {sendMessage(message.chat.id, "I got your message!")}, 20000);
+  //setInterval(() => {sendMessage(message.chat.id, "I got your message!")}, 20000);
   /*
   // Utilisez une fonction de rappel pour setInterval
   setInterval(() => {
